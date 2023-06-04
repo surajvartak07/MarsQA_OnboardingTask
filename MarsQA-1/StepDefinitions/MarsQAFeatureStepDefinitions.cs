@@ -24,7 +24,7 @@ namespace MarsQA_1.StepDefinitions
         public void WhenUserAddsNewLanguage()
         {
             languagesObj.CleanLanguageTable(driver);
-            languagesObj.AddLanguage(driver);
+            languagesObj.AddLanguage(driver,"Marathi");
         }
 
         [Then(@"Newly added language is displayed in the languages list on user profile")]
@@ -63,6 +63,23 @@ namespace MarsQA_1.StepDefinitions
             driver.Quit();
             driver.Dispose();
         }
+
+        [When(@"User adds four languages")]
+        public void WhenUserAddsFourLanguages()
+        {
+            languagesObj.AddFourLanguages(driver);
+        }
+
+        [Then(@"Add new Language button is not visible so user is not able to add fifth language")]
+        public void ThenAddNewLanguageButtonIsNotVisibleSoUserIsNotAbleToAddFifthLanguage()
+        {
+            bool limit = languagesObj.ValidateMaxLanguageLimit(driver);
+            Assert.That(limit = true);
+            driver.Quit();
+            driver.Dispose();
+        }
+
+
 
     }
 }
