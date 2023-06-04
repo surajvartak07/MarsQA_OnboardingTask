@@ -64,3 +64,18 @@ Scenario: 04 User should be able to add maximum four languages
 #	Given User is logged into MarsQA application 
 #	When User delets newly added skill
 #	Then Skill is deleted successfully
+
+#Scenario: 13 User adds Certification to the profile
+#	Given User is logged into MarsQA application 
+#	When User adds multiple new certification 
+#	Then Newly added certifications are displayed in the skills list on user profile 
+#
+#Scenario: 14 User edits newly added certification 
+#	Given User is logged into MarsQA application
+#	When User edits newly added certification 
+#	Then certification is edited successfully 
+#
+#Scenario: 14 User delets newly added certification 
+#	Given User is logged into MarsQA application 
+#	When User delets newly added certification
+#	Then certification is deleted successfully
